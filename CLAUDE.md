@@ -47,12 +47,22 @@ Run migrations in order via **Supabase → SQL Editor**:
 1. `supabase/migrations/001_initial_schema.sql` — full schema, RLS, triggers, seed data
 2. `supabase/migrations/002_phase2.sql` — storage bucket, activity_equipment seeds, profiles INSERT policy
 
+## Where We Left Off
+
+Phases 1 and 2 are code-complete. The immediate blocker before moving to Phase 3 is:
+
+**Fix signup error first.** When registering a new account, Supabase returns "Database error saving new user". This is caused by the `handle_new_user` trigger on `auth.users` failing. To diagnose: attempt a signup, then go to **Supabase → Logs → Postgres** and read the exact error. Likely a permissions or constraint issue in the trigger. Once signup works end-to-end, Phase 3 (social features) can begin.
+
+**Testing setup note.** The app was tested via `npx expo start --web` (browser preview). A development APK was built via EAS for Android but QR scanning didn't connect due to a local network issue — tunnel mode (`npx expo start --tunnel`) was tried but also had issues. This is unresolved. For device testing, revisit tunnel mode or try Android Studio emulator (`press 'a'` in the Expo terminal).
+
 ## Known Issues / Open Items
 
-- **Signup "Database error saving new user"** — Intermittently seen during local testing. Suspected cause: trigger or RLS policy issue. Check Supabase → Logs → Postgres for the root error when it occurs.
-- **Apple / Google sign-in** — UI buttons not yet implemented. Email/password only for now.
-- **Profile avatar** — Shows initials only. Photo upload deferred to a later phase.
+- **Signup "Database error saving new user"** — Blocks end-to-end testing. Check Supabase → Logs → Postgres immediately after a failed signup attempt for the root cause.
+- **Device preview not working** — QR code scanning fails with `java.lang.RuntimeException: Unable to load script`. Likely a local network/firewall issue. Try `npx expo start --tunnel` or Android Studio emulator.
+- **Apple / Google sign-in** — Not implemented. Email/password only for now.
+- **Profile avatar** — Shows initials only. Photo upload for avatars deferred (activity photo upload to Supabase Storage is working).
 - **`activity_logs` SELECT policy** — Currently only allows users to read their own logs. Must be expanded in Phase 3 to allow reading followed users' logs for the feed.
+- **Level thresholds** — Placeholder values in `src/constants/levels.ts`. To be confirmed before launch.
 
 ## Tech Stack
 
