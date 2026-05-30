@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Callous is a freemium mobile app (iOS + Android) for tracking mindset and resilience activities inspired by David Goggins. Users log "hard things" from a curated activity list, earn points, climb levels, follow others, and receive rule-based weekly training plans (paid feature).
+Callus is a freemium mobile app (iOS + Android) for tracking mindset and resilience activities inspired by David Goggins. Users log "hard things" from a curated activity list, earn points, climb levels, follow others, and receive rule-based weekly training plans (paid feature).
 
 ## Commands
 
@@ -120,7 +120,7 @@ Black/white only. See `src/constants/colors.ts` for the palette. Never introduce
 ## Project Structure
 
 ```
-callous/
+callus/
 ├── src/
 │   ├── app/
 │   │   ├── (auth)/

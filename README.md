@@ -1,4 +1,4 @@
-# Callous
+# Callus
 
 A freemium mobile app for tracking mindset and resilience activities, built on the philosophy of David Goggins. Do hard things. Build your callus.
 

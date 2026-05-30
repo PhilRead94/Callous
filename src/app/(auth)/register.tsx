@@ -52,7 +52,7 @@ export default function RegisterScreen() {
   if (success) {
     return (
       <View style={styles.successContainer}>
-        <Text style={styles.logo}>CALLOUS</Text>
+        <Text style={styles.logo}>CALLUS</Text>
         <Text style={styles.successTitle}>Check your email</Text>
         <Text style={styles.successBody}>
           We've sent a confirmation link to {email}.{'\n'}Click it to activate your account.
@@ -76,7 +76,7 @@ export default function RegisterScreen() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Text style={styles.logo}>CALLOUS</Text>
+          <Text style={styles.logo}>CALLUS</Text>
           <Text style={styles.tagline}>Build your callus.</Text>
         </View>
 

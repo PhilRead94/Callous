@@ -45,7 +45,7 @@ export default function LoginScreen() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.header}>
-          <Text style={styles.logo}>CALLOUS</Text>
+          <Text style={styles.logo}>CALLUS</Text>
           <Text style={styles.tagline}>Do hard things.</Text>
         </View>
 

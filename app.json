@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Callous",
-    "slug": "callous",
+    "name": "Callus",
+    "slug": "callus",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "callous",
+    "scheme": "callus",
     "userInterfaceStyle": "dark",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -18,7 +18,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.philread94.callous"
+      "package": "com.philread94.callus"
     },
     "web": {
       "output": "static",
