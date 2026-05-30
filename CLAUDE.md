@@ -49,6 +49,8 @@ Run migrations in order via **Supabase → SQL Editor**:
 
 ## Where We Left Off
 
+**Session 2026-05-30 — Project renamed `Callous` → `Callus` (spelling fix).** Completed: all code/config/app text (app.json name/slug/scheme/Android package `com.philread94.callus`, package.json, README, login/register logo), committed & pushed, GitHub repo renamed to `Callus`, local git remote updated to `https://github.com/PhilRead94/Callus.git`. **Pending:** local folder rename `C:\dev\Callous` → `C:\dev\Callus` (user doing this manually after closing the session — folder is locked while Claude Code runs inside it). Reopen in `C:\dev\Callus` afterwards. Note: `app.json` still has the original EAS `projectId`, so a future `eas build` may warn about a slug mismatch — rename the project on expo.dev or `eas init` to relink if needed.
+
 Phases 1 and 2 are code-complete. The immediate blocker before moving to Phase 3 is:
 
 **Fix signup error first.** When registering a new account, Supabase returns "Database error saving new user". This is caused by the `handle_new_user` trigger on `auth.users` failing. To diagnose: attempt a signup, then go to **Supabase → Logs → Postgres** and read the exact error. Likely a permissions or constraint issue in the trigger. Once signup works end-to-end, Phase 3 (social features) can begin.
